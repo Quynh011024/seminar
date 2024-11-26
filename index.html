@@ -17,6 +17,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
           <li class="nav-item"><a class="nav-link" href="introduce.html">Giới thiệu Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nội dung chính</a></li>
         </ul>
       </div>
     </div>
@@ -28,66 +29,47 @@
     <p>Giới thiệu các thành viên trong nhóm</p>
   </header>
 
-  <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
-  
-    <!-- Carousel Content -->
-    <div class="carousel-inner d-flex">
-      <!-- Member 1 -->
+  <div id="teamCarousel" class="carousel slide container mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="card mx-2" style="width: 18rem;">
-          <img src="./img/img1.jpg" class="card-img-top" alt="Lê Nguyễn Tuấn Quỳnh">
-          <div class="card-body text-center">
-            <h5 class="card-title">Lê Nguyễn Tuấn Quỳnh</h5>
-            <p class="card-text">Vai trò: Thuyết trình.</p>
-            <a href="#" class="btn btn-primary">Xem thêm</a>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/img/img1.jpg" alt="Member 1" class="img-fluid">
+            <div class="member-info">
+              <h5>Lê Nguyễn Tuấn Quỳnh</h5>
+              <p>Group Leader</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="/img/img2.jpg" alt="Member 2" class="img-fluid">
+            <div class="member-info">
+              <h5>Nguyễn Thế Anh Tài</h5>
+              <p>Member</p>
+            </div>
           </div>
         </div>
       </div>
-  
-      <!-- Member 2 -->
+      <!-- Slide 2 -->
       <div class="carousel-item">
-        <div class="card mx-2" style="width: 18rem;">
-          <img src="./img/img1.jpg" class="card-img-top" alt="Nguyễn Thế Anh Tài">
-          <div class="card-body text-center">
-            <h5 class="card-title">Nguyễn Thế Anh Tài</h5>
-            <p class="card-text">Vai trò: Thiết kế web.</p>
-            <a href="#" class="btn btn-primary">Xem thêm</a>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/img/img3.jpg" alt="Member 3" class="img-fluid">
+            <div class="member-info">
+              <h5>Nguyễn Quý Công</h5>
+              <p>Member</p>
+            </div>
           </div>
-        </div>
-      </div>
-  
-      <!-- Member 3 -->
-      <div class="carousel-item">
-        <div class="card mx-2" style="width: 18rem;">
-          <img src="./img/img1.jpg" class="card-img-top" alt="Nguyễn Quý Công">
-          <div class="card-body text-center">
-            <h5 class="card-title">Nguyễn Quý Công</h5>
-            <p class="card-text">Vai trò: Tổng hợp nội dung.</p>
-            <a href="#" class="btn btn-primary">Xem thêm</a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Member 4 -->
-      <div class="carousel-item">
-        <div class="card mx-2" style="width: 18rem;">
-          <img src="./img/img1.jpg" class="card-img-top" alt="Mai Nguyễn Ngọc Duy">
-          <div class="card-body text-center">
-            <h5 class="card-title">Mai Nguyễn Ngọc Duy</h5>
-            <p class="card-text">Vai trò: Thiết kế web.</p>
-            <a href="#" class="btn btn-primary">Xem thêm</a>
+          <div class="col-md-6">
+            <img src="/img/img4.jpg" alt="Member 4" class="img-fluid">
+            <div class="member-info">
+              <h5>Mai Nguyễn Ngọc Duy</h5>
+              <p>Member</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  
     <!-- Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -98,23 +80,27 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  
-
 
   <!-- Topic Section -->
   <div class="container my-5">
-    <h2 class="text-center mb-4">Đề Tài: Làm Về Bootstrap</h2>
+    <h2>Đề Tài: Làm Về Bootstrap</h2>
     <p class="text-center">
       Dự án này nhằm mục đích tìm hiểu và áp dụng framework Bootstrap để tạo giao diện web nhanh chóng và hiện đại.
       Các thành viên đã hợp tác để thực hiện các phần:
     </p>
+    <ul class="list-group">
+      <li class="list-group-item">Lê Nguyễn Tuấn Quỳnh: Thuyết trình về web và các tính năng của bootstrap.</li>
+      <li class="list-group-item">Nguyễn Thế Anh Tài: Thiết kế giao diện.</li>
+      <li class="list-group-item">Nguyễn Quý Công: Tìm hiểu về lịch sử và các đặc điểm nổi bật của bootstrap.</li>
+      <li class="list-group-item">Mai Nguyễn Ngọc Duy: Thiết kế giao diện.</li>
+    </ul>
   </div>
 
   <footer>
     <p>&copy; 2024 ?. All rights reserved.</p>
   </footer>
 
-  <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
