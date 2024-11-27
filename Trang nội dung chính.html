@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Năng Của Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Tổng thể */
+        body {
+            background: linear-gradient(135deg, #ccaded 30%, #e899d2 100%); 
+            color: #212529;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+    
+        /* Tiêu đề */
+        h1, h2 {
+            color: #6f42c1; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+        }
+    
+        /* Navbar */
+        .navbar {
+            background-color: #6f42c1 !important; /* Màu tím chủ đạo */
+            border-bottom: 2px solid #b19cd9; /* Tạo đường viền nhẹ */
+        }
+        .navbar a {
+            color: #dbdbdb !important; 
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #45b6a9 !important; 
+        }
+    
+        /* Hệ thống lưới */
+        .row .col-md-4 {
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        .row .col-md-4:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .row .p-3 {
+            background-color: #ffffff;
+            color: #6f42c1;
+            border-radius: 8px;
+            border: 2px solid #6f42c1;
+        }
+    
+        /* Form */
+        form {
+            background-color: #d484e4;
+            padding: 20px;
+            border: 2px solid #6f42c1;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            color: #212529;
+        }
+        form .form-control {
+            background-color: #f8f9fa;
+            color: #212529;
+            border: 1px solid #b19cd9;
+        }
+    
+        /* Buttons */
+        button, .btn {
+            background-color: #6f42c1;
+            color: #ffffff;
+            border: none;
+        }
+        button:hover, .btn:hover {
+            background-color: #5a3791;
+        }
+    
+        /* Carousel */
+        .carousel-inner img {
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        }
+    
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #6f42c1;
+            border-radius: 20%;
+        }
+    
+        /* Tooltip */
+        .btn-secondary {
+            background-color: #6f42c1;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #5a3791;
+            color: #ffffff;
+        }
+    
+        /* Modal */
+        .modal-header {
+            background-color: #6f42c1;
+            color: #ffffff;
+        }
+    
+        .modal-footer .btn-primary {
+            background-color: #6f42c1;
+        }
+        .modal-footer .btn-primary:hover {
+            background-color: #5a3791;
+        }
+    
+        /* Footer */
+        footer {
+            background-color: #6f42c1;
+            color: #ffffff;
+            border-top: 2px solid #b19cd9;
+        }
+    
+        footer a {
+            color: #ffc107;
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+    
+    
+    
+</head>
+
+<body>
+    <!-- Navbar tiêu đề -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Trang chủ.html">Trang Chủ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tính Năng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Nhóm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nội dung -->
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Các Tính Năng Của Bootstrap</h1>
+        
+        <!-- Navbar -->
+        <h2 class="mt-4">1. Thanh Điều Hướng (Navbar)</h2>
+        <p>Tạo thanh điều hướng đáp ứng, giúp người dùng dễ dàng di chuyển trong website.</p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Tổng quát những tính năng cơ bản</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Navbar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#grid">Grid System</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form">Form Controls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carousel">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tooltip">Tooltip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modal">Modal</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <hr>
+        <!-- Grid System -->
+        <section id="grid">
+            <h2 class="mt-4">2. Hệ Thống Lưới (Grid System)</h2>
+            <p>Tạo bố cục linh hoạt và đáp ứng cho các trang web, giúp chia cột và điều chỉnh giao diện cho các thiết bị có kích thước màn hình khác nhau.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="p-3 border bg-light">Cột 1</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border bg-light">Cột 2</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border bg-light">Cột 3</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Form Controls -->
+        <section id="form">
+            <h2 class="mt-4">3. Form Controls</h2>
+            <p>Cung cấp các thành phần giao diện cho form, bao gồm các trường văn bản, chọn hộp, radio buttons, checkbox, v.v.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="justEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="justEmail" aria-describedby="emailHelp" placeholder="Vd: NguyenVanA@gmail.com">
+                </div>
+                <div class="mb-3">
+                    <label for="justPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="justPassword" placeholder="Nhập pass vào đây">
+                </div>
+                <div class="mb-3 form-check">
+                    <label for="justConfirm" class="form-check-label">Lưu thông tin</label>
+                    <input type="checkbox" class="form-check-input" id="justConfirm">
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi</button>
+            </form>
+        </section>
+
+        <hr>
+        <!-- Carousel -->
+        <section id="carousel">
+            <h2 class="mt-4">4. Carousel</h2>
+            <p>Hiển thị chuỗi hình ảnh hoặc nội dung trong một carousel có thể cuộn qua lại.</p>
+            <div id="justCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://i1.wp.com/www.orphicpixel.com/wp-content/uploads/2015/02/bootstrap.jpg?fit=700%2C700&ssl=1"
+                         class="d-block w-100" alt="hình ảnh về bootstrap">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--PtHBDwu9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wcpq223pwvmjfm9bguys.jpeg" 
+                        class="d-block w-100" alt="hình ảnh về bootstrap">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://haznos.org/wp-content/webpc-passthru.php?src=https://haznos.org/wp-content/uploads/2016/09/bootstrap-responsive-front-end-framework.jpg&nocache=1" 
+                        class="d-block w-100" alt="hình ảnh về bootstrap">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#justCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#justCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Tooltip -->
+        <section id="tooltip">
+            <h2 class="mt-4">5. Tooltip</h2>
+            <p>Hiển thị thông tin bổ sung khi người dùng di chuột qua hoặc click vào phần tử trên trang.</p>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                Hover over me
+            </button>
+        </section>
+
+        <hr>
+        <!-- Modal -->
+        <section id="modal">
+            <h2 class="mt-4">6. Modal</h2>
+            <p>Hiển thị cửa sổ bật lên cho các tác vụ như xác nhận hành động, hiển thị thông tin chi tiết hoặc trình bày nội dung đặc biệt.</p>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#justModal">
+                Đã hiểu tất cả mọi thứ 
+            </button>
+
+            <div class="modal fade" id="justModal" tabindex="-1" aria-labelledby="justModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <h5 class="modal-title" id="justModalLabel">Modal Title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Nếu bạn muốn biết thêm, hãy đi tới trang chủ của bootstrap</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://getbootstrap.com/'">Đi ngay và luôn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Bootstrap Introduction by "?" group</p>
+    </footer>
+
+    <script>
+        // Kích hoạt Tooltip
+        var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
