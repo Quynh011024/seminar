@@ -104,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link active" href="index.html">Trang chủ</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item right">
               <a class="nav-link" href="introduce.html">Giới thiệu Bootstrap</a>
             </li>
             <li class="nav-item">
@@ -116,53 +116,75 @@
     </nav>
 
     <!-- Header -->
-    <header class="text-center py-5">
+    <header class="text-center">
       <h1>Chào Mừng Đến Với Nhóm ? (Chấm hỏi)</h1>
-      <p>Giới thiệu các thành viên trong nhóm</p>
+      <h2>Đề Tài: Bootstrap</h2>
     </header>
-
+    <div class="text-center mb-5">
+      <h4><b>Giới thiệu các thành viên trong nhóm</b></h4>
+    </div>
     <div
       id="teamCarousel"
-      class="carousel slide container mt-5"
-      data-bs-ride="carousel"
+      class="carousel slide container-fluid"
+      data-bs-ride="true"
     >
       <div class="carousel-inner">
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-1"></div>
+            <div
+              class="col-md-5 btn"
+              data-bs-toggle="modal"
+              data-bs-target="#QuynhModal"
+            >
               <img src="/img/img1.jpg" alt="Member 1" class="img-fluid" />
               <div class="member-info">
                 <h5>Lê Nguyễn Tuấn Quỳnh</h5>
                 <p>Group Leader</p>
               </div>
             </div>
-            <div class="col-md-6">
+            <div
+              class="col-md-5 btn"
+              data-bs-toggle="modal"
+              data-bs-target="#TaiModal"
+            >
               <img src="/img/img2.jpg" alt="Member 2" class="img-fluid" />
               <div class="member-info">
                 <h5>Nguyễn Thế Anh Tài</h5>
                 <p>Member</p>
               </div>
             </div>
+            <div class="col-md-1"></div>
           </div>
         </div>
         <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-1"></div>
+            <div
+              class="col-md-5 btn"
+              data-bs-toggle="modal"
+              data-bs-target="#CongModal"
+            >
               <img src="/img/img3.jpg" alt="Member 3" class="img-fluid" />
               <div class="member-info">
                 <h5>Nguyễn Quý Công</h5>
                 <p>Member</p>
               </div>
             </div>
-            <div class="col-md-6">
+            <div
+              class="col-md-5 btn"
+              data-bs-toggle="modal"
+              data-bs-target="#DuyModal"
+            >
               <img src="/img/img4.jpg" alt="Member 4" class="img-fluid" />
               <div class="member-info">
                 <h5>Mai Nguyễn Ngọc Duy</h5>
                 <p>Member</p>
               </div>
             </div>
+            <div class="col-md-1"></div>
           </div>
         </div>
       </div>
@@ -187,34 +209,140 @@
       </button>
     </div>
 
-    <!-- Topic Section -->
-    <div class="container my-5">
-      <h2>Đề Tài: Làm Về Bootstrap</h2>
-      <p class="text-center">
-        Dự án này nhằm mục đích tìm hiểu và áp dụng framework Bootstrap để tạo
-        giao diện web nhanh chóng và hiện đại. Các thành viên đã hợp tác để thực
-        hiện các phần:
-      </p>
-      <ul class="list-group">
-        <li class="list-group-item">
-          Lê Nguyễn Tuấn Quỳnh: Thuyết trình về web và các tính năng của
-          bootstrap.
-        </li>
-        <li class="list-group-item">Nguyễn Thế Anh Tài: Thiết kế giao diện.</li>
-        <li class="list-group-item">
-          Nguyễn Quý Công: Tìm hiểu về lịch sử và các đặc điểm nổi bật của
-          bootstrap.
-        </li>
-        <li class="list-group-item">
-          Mai Nguyễn Ngọc Duy: Thiết kế giao diện.
-        </li>
-      </ul>
-    </div>
-
-    <footer>
+    <footer class="mt-5">
       <p>&copy; 2024 ?. All rights reserved.</p>
     </footer>
-
+    <!------------------------------ Modal ------------------------------>
+    <!-- Quynh -->
+    <div
+      class="modal fade"
+      id="QuynhModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <strong>Thông tin cá nhân</strong>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <span>Tên: Lê Nguyễn Tuấn Quỳnh</span>
+            <br />
+            <span>MSSV: 22110183</span>
+            <hr />
+            <span
+              >Nhiệm vụ: Thuyết trình về web và các tính năng của bootstrap.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tai -->
+    <div
+      class="modal fade"
+      id="TaiModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <strong>Thông tin cá nhân</strong>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <span>Tên: Nguyễn Thế Anh Tài</span>
+            <br />
+            <span>MSSV: 22110192</span>
+            <hr />
+            <span>Nhiệm vụ: Thiết kế giao diện. </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cong -->
+    <div
+      class="modal fade"
+      id="CongModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <strong>Thông tin cá nhân</strong>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <span>Tên: Nguyễn Quý Công</span>
+            <br />
+            <span>MSSV: 21110048</span>
+            <hr />
+            <span
+              >Nhiệm vụ: Tìm hiểu về lịch sử và các đặc điểm nổi bật của
+              bootstrap.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Duy -->
+    <div
+      class="modal fade"
+      id="DuyModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <strong>Thông tin cá nhân</strong>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <span>Tên: Mai Nguyễn Ngọc Duy</span>
+            <br />
+            <span>MSSV: 21110275</span>
+            <hr />
+            <span>Nhiệm vụ: Thiết kế giao diện. </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
