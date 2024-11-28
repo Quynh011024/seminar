@@ -14,6 +14,86 @@
             text-align: center;
             position: relative;
         }       
+
+    /* Tổng thể */
+    body {
+        color: #212529; /* Màu chữ tối trung tính */
+        font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    /* Tiêu đề */
+    h1, h2 {
+        color: #6f42c1; /* Tông tím chủ đạo */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+    }
+
+    /* Navbar */
+    .navbar {
+        background-color: #6f42c1 !important; /* Màu tím chủ đạo */
+        border-bottom: 2px solid #b19cd9; /* Viền nhẹ */
+    }
+    .navbar a {
+        color: #dbdbdb !important; /* Chữ sáng */
+        font-weight: bold;
+    }
+    .navbar a:hover {
+        color: #45b6a9 !important; /* Tông xanh nhấn */
+    }
+
+    /* Hero Section */
+    .hero .btn-primary {
+        background-color: #6f42c1;
+        border-color: #5a3791;
+    }
+    .hero .btn-primary:hover {
+        background-color: #5a3791;
+    }
+    .hero .btn-secondary {
+        background-color: #b19cd9;
+        color: #212529;
+    }
+    .hero .btn-secondary:hover {
+        background-color: #8d63b4;
+        color: #ffffff;
+    }
+
+    /* Hệ thống lưới */
+    .row .col-md-4 {
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .row .col-md-4:hover {
+        transform: translateY(-20px);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        background-color: #d288f1;
+    }
+    
+
+    /* Buttons */
+    button, .btn {
+        background-color: #6f42c1;
+        color: #ffffff;
+        border: none;
+    }
+    button:hover, .btn:hover {
+        background-color: #5a3791;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #6f42c1;
+        color: #ffffff;
+        border-top: 2px solid #b19cd9;
+    }
+
+    footer a {
+        color: #ffc107;
+    }
+    footer a:hover {
+        color: #ffffff;
+    }
+
+
     </style>
 </head>
 <body>
@@ -44,9 +124,15 @@
     <div class="hero">
         <h1 class="display-4">Chào Mừng Bạn Đến Với Bootstrap</h1>
         <p class="lead">Học cách sử dụng Bootstrap để tạo ra các giao diện web đẹp mắt và phản hồi nhanh chóng.</p>
-        <a href="Trang giới thiệu.html" class="btn btn-primary btn-lg">Tìm Hiểu Về Bootstrap</a>
+        <a href="Trang giới thiệu.html" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" 
+            data-bs-placement="top" data-bs-title="Đi đến trang giới thiệt Bootstrap">Tìm Hiểu Về Bootstrap</a>
         <a href="Trang tính năng.html" class="btn btn-secondary btn-lg">Khám Phá Tính Năng</a>
         <a href="Trang nhóm.html" class="btn btn-success btn-lg">Giới Thiệu Nhóm</a>
+        
+        <!-- <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script> -->
     </div>
 
     <div class="container py-5">
@@ -54,7 +140,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="text-center">
-                    <div class="feature-icon">💻</div>
+                    <div>💻</div>
                     <h4>Responsive Design</h4>
                     <p>Bootstrap giúp bạn tạo ra các trang web đáp ứng nhanh chóng và dễ dàng trên mọi thiết bị.</p>
                 </div>
@@ -68,7 +154,7 @@
             </div>
             <div class="col-md-4">
                 <div class="text-center">
-                    <div class="feature-icon">🎨</div>
+                    <div>🎨</div>
                     <h4>Thiết Kế Đẹp</h4>
                     <p>Bootstrap cung cấp nhiều thành phần giao diện sẵn có, giúp trang web của bạn trở nên chuyên nghiệp ngay lập tức.</p>
                 </div>
