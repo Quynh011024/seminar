@@ -25,15 +25,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* Tổng thể */
-        body {
-            background: linear-gradient(to bottom, #f7daef 30%, #8431dc);
-            /* background: linear-gradient(135deg, #ccaded 30%, #e899d2 100%); */
-            /* background:linear-gradient(to top, #99b9da, #ffffff); */
-            color: #212529;
-            font-family: 'Roboto', Arial, sans-serif;
-        }
-
         /* Tiêu đề */
         h3 {
             color: #6f42c1;
@@ -71,6 +62,11 @@
         }
 
         /* Hệ thống lưới */
+        .row{
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
         .row .col-md-4 {
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
@@ -108,8 +104,7 @@
         }
 
         /* Buttons */
-        button,
-        .btn {
+        button {
             background-color: #6f42c1;
             color: #ffffff;
             border: none;
@@ -133,11 +128,13 @@
         }
 
         .carousel-item img {
+            object-position: top;
             max-width: 100%;
             /* Giới hạn chiều rộng ảnh */
-            max-height: 500px;
+            /* max-height: 500px; */
+            height: 75vh;
             /* Giới hạn chiều cao ảnh */
-            object-fit: cover;
+            object-fit: fill;
             /* Giữ tỉ lệ và lấp đầy không gian */
         }
 
@@ -210,11 +207,14 @@
 
     <header class="hero text-center">
         <h1 class="display-4">Chào Mừng Bạn Đến Với Nhóm ? (Chấm hỏi)</h1>
-        <p class="lead">Học cách sử dụng Bootstrap để tạo ra các giao diện web đẹp mắt và phản hồi nhanh chóng.</p>
-        <a href="introduce.html" class="btn btn-primary btn-lg">Giới thiệu về Bootstrap</a>
-        <a href="feature.html" class="btn btn-success btn-lg">Khám phá tính năng</a>
+        <p class="lead">
+          Học cách sử dụng Bootstrap để tạo ra các giao diện web đẹp mắt và phản
+          hồi nhanh chóng.
+        </p>
+        <a href="introduce.html" class="btn btn-lg">Giới thiệu về Bootstrap</a>
+        <a href="feature.html" class="btn btn-lg">Khám phá tính năng</a>
         <a href="index.html" class="btn btn-lg">Tìm hiểu thành viên</a>
-    </header>
+      </header>
 
     <!-- Nội dung -->
     <div class="container py-5">

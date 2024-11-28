@@ -1,6 +1,6 @@
 :root {
   --color-main: #6f42c1;
-  --text-color-main: rgb(31, 200, 169);
+  --text-color-main: #b9efc6;
 }
 /* Định dạng chung */
 body {
@@ -9,11 +9,20 @@ body {
   color: #212529;
   padding-top: 56px;
   /* background:linear-gradient(to top, #99b9da, #ffffff); */
-  background: linear-gradient(to bottom, #f7daef 30%, #8431dc);
+  background: linear-gradient(135deg, #cdcdfd 60%, #2b307d);
 }
 
+h4,
+h5 {
+  color: black;
+  font-weight: bold;
+}
+
+.indexBody {
+  background: linear-gradient(170deg, #cdcdfd 70%, #2b307d);
+}
 .homeBody {
-  background-image: url("./img/header.jpg");
+  background-image: url("https://c.wallhere.com/photos/28/9f/night_blue_mountains_digital_art_landscape_stars-84488.jpg!d");
   background-size: cover;
   background-attachment: fixed;
   color: var(--text-color-main);
@@ -23,11 +32,12 @@ body {
 /*Hero Section*/
 .hero {
   /* background-image: url("./img/header.jpg"); */
-  background-image: url("./img/header.jpg");
+  background-image: url("https://c.wallhere.com/photos/28/9f/night_blue_mountains_digital_art_landscape_stars-84488.jpg!d");
   background-size: cover;
   background-attachment: fixed;
   color: var(--text-color-main);
-  padding: 100px 0;
+  padding: 120px 0;
+  /* height: 100vh; */
   text-align: center;
   position: relative;
 }
@@ -81,6 +91,7 @@ header p {
   object-fit: cover;
   border-radius: 10px;
 }
+
 .member-info {
   text-align: center;
   margin-top: 10px;
@@ -169,7 +180,7 @@ h3 {
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
   /* background-color: white; */
-  color: white;
+  color: var(--text-color-main);
 }
 .row .col-md-4:hover {
   transform: translateY(-20px);
