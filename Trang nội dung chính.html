@@ -15,7 +15,7 @@
         }
     
         /* Tiêu đề */
-        h1, h2 {
+        h1, h3 {
             color: #6f42c1; 
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
         }
@@ -32,6 +32,16 @@
         .navbar a:hover {
             color: #45b6a9 !important; 
         }
+
+        /* Thay đổi màu nền và màu chữ của dropdown menu */
+        .dropdown-menu {
+            background-color: #987dcf; 
+        }
+
+        /* Thay đổi màu khi hover vào các mục trong dropdown */
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #7f58bd; 
+        }   
     
         /* Hệ thống lưới */
         .row .col-md-4 {
@@ -119,10 +129,10 @@
         }
     
         footer a {
-            color: #ffc107;
+            color: #8cda5b;
         }
         footer a:hover {
-            color: #ffffff;
+            color: #e5df61;
         }
     </style>
     
@@ -144,7 +154,7 @@
                         <a class="nav-link" href="">Giới Thiệu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tính Năng</a>
+                        <a class="nav-link" href="">Tính Năng</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Nhóm</a>
@@ -156,146 +166,425 @@
 
     <!-- Nội dung -->
     <div class="container py-5">
-        <h1 class="text-center mb-4">Các Tính Năng Của Bootstrap</h1>
+        <h1 class="text-center m-4">Các Tính Năng Của Bootstrap</h1>
         
-        <!-- Navbar -->
-        <h2 class="mt-4">1. Thanh Điều Hướng (Navbar)</h2>
-        <p>Tạo thanh điều hướng đáp ứng, giúp người dùng dễ dàng di chuyển trong website.</p>
+        <!-- Navbar dẫn đến các tính năng-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Tổng quát những tính năng cơ bản</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Navbar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#grid">Grid System</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#form">Form Controls</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#carousel">Carousel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tooltip">Tooltip</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#modal">Modal</a>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Tổng quát những tính năng cơ bản: </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#layout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layout</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#grid">Grid System</a></li>
+                                <li><a class="dropdown-item" href="#container">Containers</a></li>
+                                <li><a class="dropdown-item" href="#breakpoint">Breakpoints</a></li>
+                                <li><a class="dropdown-item" href="#column_sizing">Column Sizing</a></li>
+                                <li><a class="dropdown-item" href="#ordering">Ordering</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#forms" role="button" data-bs-toggle="dropdown" aria-expanded="false">Forms</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#form_control">Form Controls</a></li>
+                                <li><a class="dropdown-item" href="#validation_states">Validation States</a></li>
+                                <li><a class="dropdown-item" href="#input_group">Input Group</a></li>
+                                <li><a class="dropdown-item" href="#custom_form">Custom Forms</a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#components" role="button" data-bs-toggle="dropdown" aria-expanded="false">Components</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#navbar" class="dropdown-item">Navbar</a></li>
+                                <li><a href="#carousel" class="dropdown-item">Carousel</a></li>
+                                <li><a href="#tooltip" class="dropdown-item">Tooltip</a></li>
+                                <li><a href="#modal" class="dropdown-item">Modal</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#utilities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Utilities</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#spacing_utilities">Spacing</a></li>
+                                <li><a class="dropdown-item" href="#typography_utilities">Typography</a></li>
+                                <li><a class="dropdown-item" href="#background_&_color_utilities">Background & Color</a></li>
+                                <li><a class="dropdown-item" href="#display_utilities">Display</a></li>
+                                <li><a class="dropdown-item" href="#flexbox_utilities">Flexbox</a></li>
+                                <li><a class="dropdown-item" href="#borders_&_shadows">Borders & Shadows</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
         <hr>
-        <!-- Grid System -->
-        <section id="grid">
-            <h2 class="mt-4">2. Hệ Thống Lưới (Grid System)</h2>
-            <p>Tạo bố cục linh hoạt và đáp ứng cho các trang web, giúp chia cột và điều chỉnh giao diện cho các thiết bị có kích thước màn hình khác nhau.</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="p-3 border bg-light">Cột 1</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-3 border bg-light">Cột 2</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-3 border bg-light">Cột 3</div>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-        <!-- Form Controls -->
-        <section id="form">
-            <h2 class="mt-4">3. Form Controls</h2>
-            <p>Cung cấp các thành phần giao diện cho form, bao gồm các trường văn bản, chọn hộp, radio buttons, checkbox, v.v.</p>
-            <form>
-                <div class="mb-3">
-                    <label for="justEmail" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="justEmail" aria-describedby="emailHelp" placeholder="Vd: NguyenVanA@gmail.com">
-                </div>
-                <div class="mb-3">
-                    <label for="justPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="justPassword" placeholder="Nhập pass vào đây">
-                </div>
-                <div class="mb-3 form-check">
-                    <label for="justConfirm" class="form-check-label">Lưu thông tin</label>
-                    <input type="checkbox" class="form-check-input" id="justConfirm">
-                </div>
-                <button type="submit" class="btn btn-primary">Gửi</button>
-            </form>
-        </section>
-
-        <hr>
-        <!-- Carousel -->
-        <section id="carousel">
-            <h2 class="mt-4">4. Carousel</h2>
-            <p>Hiển thị chuỗi hình ảnh hoặc nội dung trong một carousel có thể cuộn qua lại.</p>
-            <div id="justCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://i1.wp.com/www.orphicpixel.com/wp-content/uploads/2015/02/bootstrap.jpg?fit=700%2C700&ssl=1"
-                         class="d-block w-100" alt="hình ảnh về bootstrap">
+        <!-- Layout -->
+        <section id="layout">
+            <h1 class="text-center mt-4">1. Layout</h1>
+            <p>Layout trong Bootstrap giúp tổ chức và cấu trúc nội dung của trang web. Với hệ thống lưới (Grid System), bạn có thể tạo bố cục đáp ứng trên nhiều thiết bị.</p>
+            
+            <!-- Grid System -->
+            <section id="grid">
+                <h3 class="mt-4">Hệ Thống Lưới (Grid System)</h3>
+                <p>Tạo bố cục linh hoạt và đáp ứng cho các trang web, giúp chia cột và điều chỉnh giao diện cho các thiết bị có kích thước màn hình khác nhau.</p>
+    </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="p-3 border bg-light">Cột 1</div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--PtHBDwu9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wcpq223pwvmjfm9bguys.jpeg" 
-                        class="d-block w-100" alt="hình ảnh về bootstrap">
+                    <div class="col-md-4">
+                        <div class="p-3 border bg-light">Cột 2</div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://haznos.org/wp-content/webpc-passthru.php?src=https://haznos.org/wp-content/uploads/2016/09/bootstrap-responsive-front-end-framework.jpg&nocache=1" 
-                        class="d-block w-100" alt="hình ảnh về bootstrap">
+                    <div class="col-md-4">
+                        <div class="p-3 border bg-light">Cột 3</div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#justCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#justCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+            </section>
+
+    <div class="container py-5">
+            <!-- Containers -->
+            <section id="container">
+                <h3 class="mt-4">Containers</h3>
+                <p>Containers là phần tử bao bọc nội dung với chiều rộng cố định hoặc đáp ứng, dùng để căn giữa nội dung trang web. Bootstrap cung cấp .container (cho bố cục cố định) và .container-fluid (cho bố cục toàn chiều rộng).</p>
+    </div>
+                <div class="container bg-light p-3 mb-3">
+                    <p>Container với chiều rộng đáp ứng theo kích thước màn hình.</p>
+                </div>
+                <div class="container-fluid bg-secondary text-white p-3 mb-3">
+                    <p>Container-fluid chiếm toàn bộ chiều rộng màn hình.</p>
+                </div>
+            </section>
+
+            <!-- Breakpoints -->
+    <div class="container py-5">
+            <section id="breakpoint">
+                <h3 class="mt-4">Breakpoints</h3>
+                <p>Breakpoints là các mốc kích thước màn hình giúp điều chỉnh bố cục và nội dung hiển thị tương ứng.</p>
+    </div>
+                <div class="row bg-light p-3">
+                    <div class="col-12 col-md-6 bg-primary text-white p-2">Hiển thị toàn màn hình trên thiết bị nhỏ, chia 1/2 trên thiết bị lớn hơn.</div>
+                    <div class="col-12 col-md-6 bg-success text-white p-2">Hiển thị toàn màn hình trên thiết bị nhỏ, chia 1/2 trên thiết bị lớn hơn.</div>
+                </div>
+            </section>
+
+            <!-- Column Sizing -->
+    <div class="container py-5">
+            <section id="column_sizing">
+                <h3 class="mt-4">Column Sizing</h3>
+                <p>Quản lý kích thước cột bằng cách sử dụng các lớp ".col-{breakpoint}-{số lượng}".</p>
+    </div>
+                <div class="row">
+                    <div class="col-4 bg-warning p-3">Cột 4 ô</div>
+                    <div class="col-8 bg-info text-white p-3">Cột 8 ô</div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3 bg-danger text-white p-3">Cột 3 ô</div>
+                    <div class="col-md-6 bg-secondary text-white p-3">Cột 6 ô</div>
+                    <div class="col-md-3 bg-primary text-white p-3">Cột 3 ô</div>
+                </div>
+            </section>
+
+            <!-- Ordering -->
+    <div class="container py-5">
+            <section id="ordering">
+                <h3 class="mt-4">Ordering</h3>
+                <p>Điều chỉnh thứ tự hiển thị của các cột bằng lớp `.order-{breakpoint}-{thứ tự}`.</p>
+    </div>
+                <div class="row">
+                    <div class="col order-3 bg-primary text-white p-3">Thứ tự 3</div>
+                    <div class="col order-1 bg-success text-white p-3">Thứ tự 1</div>
+                    <div class="col order-2 bg-warning p-3">Thứ tự 2</div>
+                </div>
+            </section>
+        </section>
+
+
+    <div class="container py-5">
+        <hr>
+        <!-- Forms -->
+        <section id="forms">
+            <h1 class="text-center mt-4">2. Forms</h1>
+            <p>Forms trong Bootstrap cung cấp các thành phần và cách tổ chức form chuẩn, giúp dễ dàng thu thập dữ liệu từ người dùng.</p>
+            
+            <!-- Form Controls -->
+            <section id="form_control">
+                <h3 class="mt-4">Form Controls</h3>
+                <p>Cung cấp các thành phần giao diện cho form, bao gồm các trường văn bản, chọn hộp, radio buttons, checkbox, v.v.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="justEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="justEmail" aria-describedby="emailHelp" placeholder="Vd: NguyenVanA@gmail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="justPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="justPassword" placeholder="Nhập pass vào đây">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label for="justConfirm" class="form-check-label">Lưu thông tin</label>
+                        <input type="checkbox" class="form-check-input" id="justConfirm">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </form>
+            </section>
+
+            <!-- Validation States -->
+            <section id="validation_states">
+                <h3 class="mt-4">Validation States</h3>
+                <p>Bootstrap cung cấp các trạng thái xác nhận cho form, như valid và invalid, giúp người dùng dễ dàng nhận biết các trường hợp điền sai.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="validInput" class="form-label">Email (Hợp lệ)</label>
+                        <input type="email" class="form-control is-valid" id="validInput" value="example@gmail.com">
+                        <div class="valid-feedback">Email hợp lệ!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="invalidInput" class="form-label">Email (Không hợp lệ)</label>
+                        <input type="email" class="form-control is-invalid" id="invalidInput" value="wrong-email">
+                        <div class="invalid-feedback">Vui lòng nhập đúng định dạng email.</div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Input Groups -->
+            <section id="input_group">
+                <h3 class="mt-4">Input Groups</h3>
+                <p>Cho phép nhóm các trường nhập liệu lại với nhau, như là kết hợp ô nhập liệu với biểu tượng hoặc nút.</p>
+                <form>
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control" placeholder="Tên người dùng">
+                    </div>
+                    <div class="mb-3 input-group">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm">
+                        <button class="btn btn-primary" type="button">Tìm</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Custom Forms -->
+            <section id="custom_form">
+                <h3 class="mt-4">Custom Forms</h3>
+                <p>Cho phép tùy chỉnh các thành phần form mặc định, như tạo các check box, radio buttons hoặc các công cụ nhập liệu với kiểu dáng riêng biệt.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="customRange" class="form-label">Thanh trượt:</label>
+                        <input type="range" class="form-range" id="customRange">
+                        <p>Check box và Radio:</p>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="customCheckbox">
+                        <label class="form-check-label" for="customCheckbox">Đồng ý là tôi đẹp trai</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="customRadio" id="customRadio1">
+                        <label class="form-check-label" for="customRadio1">Lựa chọn 1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="customRadio" id="customRadio2">
+                        <label class="form-check-label" for="customRadio2">Lựa chọn 2</label>
+                    </div>
+                </form>
+            </section>
+
+
         </section>
 
         <hr>
-        <!-- Tooltip -->
-        <section id="tooltip">
-            <h2 class="mt-4">5. Tooltip</h2>
-            <p>Hiển thị thông tin bổ sung khi người dùng di chuột qua hoặc click vào phần tử trên trang.</p>
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-                Hover over me
-            </button>
-        </section>
+        <!-- Components -->
+        <section id="components">
+            <h1 class="text-center mt-4">3. Components</h1>
+            <p>Components trong Bootstrap bao gồm các thành phần giao diện sẵn có như Carousel, Tooltip, và Modal, giúp cải thiện trải nghiệm người dùng.</p>
 
-        <hr>
-        <!-- Modal -->
-        <section id="modal">
-            <h2 class="mt-4">6. Modal</h2>
-            <p>Hiển thị cửa sổ bật lên cho các tác vụ như xác nhận hành động, hiển thị thông tin chi tiết hoặc trình bày nội dung đặc biệt.</p>
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#justModal">
-                Đã hiểu tất cả mọi thứ 
-            </button>
-
-            <div class="modal fade" id="justModal" tabindex="-1" aria-labelledby="justModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                                <h5 class="modal-title" id="justModalLabel">Modal Title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- Navbar -->
+            <section id="navbar">
+                <h3 class="mt-4">Thanh Điều Hướng (Navbar)</h3>
+                <p>Tạo thanh điều hướng đáp ứng, giúp người dùng dễ dàng di chuyển trong website.</p>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Tổng quát những tính năng chính</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_child" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbar_child">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#navbar">Navbar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#grid">Grid System</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#form_control">Form Controls</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#carousel">Carousel</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tooltip">Tooltip</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#modal">Modal</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="modal-body">Nếu bạn muốn biết thêm, hãy đi tới trang chủ của bootstrap</div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://getbootstrap.com/'">Đi ngay và luôn</button>
+                    </div>
+                </nav>
+            </section>
+
+            <!-- Carousel -->
+            <section id="carousel">
+                <h3 class="mt-4">Carousel</h3>
+                <p>Hiển thị chuỗi hình ảnh hoặc nội dung trong một carousel có thể cuộn qua lại.</p>
+                <div id="justCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i1.wp.com/www.orphicpixel.com/wp-content/uploads/2015/02/bootstrap.jpg?fit=700%2C700&ssl=1"
+                             class="d-block w-100" alt="hình ảnh về bootstrap">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--PtHBDwu9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wcpq223pwvmjfm9bguys.jpeg" 
+                            class="d-block w-100" alt="hình ảnh về bootstrap">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://haznos.org/wp-content/webpc-passthru.php?src=https://haznos.org/wp-content/uploads/2016/09/bootstrap-responsive-front-end-framework.jpg&nocache=1" 
+                            class="d-block w-100" alt="hình ảnh về bootstrap">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#justCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#justCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+    
+            <!-- Tooltip -->
+            <section id="tooltip">
+                <h3 class="mt-4">Tooltip</h3>
+                <p>Hiển thị thông tin bổ sung khi người dùng di chuột qua hoặc click vào phần tử trên trang.</p>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                    Kéo chuột vào đây để thấy điều bất ngờ
+                </button>
+            </section>
+
+            <!-- Modal -->
+            <section id="modal">
+                <h3 class="mt-4">Modal</h3>
+                <p>Hiển thị cửa sổ bật lên cho các tác vụ như xác nhận hành động, hiển thị thông tin chi tiết hoặc trình bày nội dung đặc biệt.</p>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#justModal">
+                    Đã hiểu tất cả mọi thứ 
+                </button>
+    
+                <div class="modal fade" id="justModal" tabindex="-1" aria-labelledby="justModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                    <h5 class="modal-title" id="justModalLabel">Tuyệt vời !</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">Nếu bạn muốn biết thêm, hãy đi tới trang chủ của bootstrap</div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="window.location.href='https://getbootstrap.com/'">Đi ngay và luôn</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
+
+        <hr>
+        <!-- Utilities -->
+        <section id="utilities">
+            <h1 class="text-center mt-4">4. Utilities</h1>
+            <p>Utilities trong Bootstrap cung cấp các lớp CSS tiện ích có sẵn để thay đổi và điều chỉnh các thuộc tính của phần tử mà không cần phải viết thêm mã CSS </p>
+            
+            <!-- Spacing Utilities -->
+            <section id="spacing_utilities">
+                <h3 class="mt-4">Spacing</h3>
+                <p>Giúp điều chỉnh lề (margin) và khoảng cách (padding) của phần tử. Ví dụ:</p>
+                <div class="p-3 bg-light border">Phần tử có padding (p-3)</div>
+                <div class="m-3 p-2 bg-secondary text-white">Phần tử có margin (m-3) và padding (p-2)</div>
+                <div class="mt-4 mb-4 bg-warning">Phần tử cách trên (mt-4) và cách dưới (mb-4)</div>
+            </section>
+
+            <!-- Typography Utilities -->
+            <section id="typography_utilities">
+                <h3 class="mt-4">Typography</h3>
+                <p>Thay đổi kiểu chữ, căn chỉnh văn bản hoặc hiển thị trạng thái văn bản:</p>             
+                <div style="background-color: #bf9ce4;">
+                    <p class="text-uppercase bg">Chữ in hoa</p>
+                    <p class="text-lowercase">chữ in thường</p>
+                    <p class="text-center">Văn bản căn giữa</p>
+                    <p>Văn <mark>bản high</mark> light</p>
+                    <p class="text-muted">Văn bản mờ</p>
+                    <p class="fw-bold">Văn bản đậm</p>
+                    <p class="fst-italic">Văn bản in nghiêng</p>
+                    <p><del>Văn bản bị gạch</del></p>
+                </div>
+            </section>
+
+            <!-- Background & Color Utilities -->
+            <section id="background_&_color_utilities">
+                <h3 class="mt-4">Background & Color</h3>
+                <p>Giúp thay đổi màu nền và màu chữ dễ dàng:</p>
+                <div class="p-2 mb-2 bg-primary text-white">Nền màu primary, chữ màu trắng</div>
+                <div class="p-2 mb-2 bg-success text-dark">Nền màu success, chữ màu đen</div>
+                <div class="p-2 mb-2 bg-danger text-white">Nền màu danger, chữ màu trắng</div>
+                <div class="p-2 mb-2 bg-light text-dark">Nền màu sáng, chữ màu đen</div>
+                <div class="p-2 mb-2 bg-dark text-white">Nền màu tối, chữ màu trắng</div>
+            </section>
+
+            <!-- Display Utilities -->
+            <section id="display_utilities">
+                <h3 class="mt-4">Display</h3>
+                <p>Điều chỉnh kiểu hiển thị của phần tử:</p>
+                <div class="d-block p-2 mb-2 text-bg-info">Phần tử hiển thị dạng block (d-block)</div>
+                <div class="d-inline p-2 mb-2 text-bg-dark">Phần tử hiển thị dạng inline (d-inline)</div>
+                <div class="d-none">Phần tử ẩn hoàn toàn (d-none)</div>
+            </section>
+
+            <!-- Flexbox Utilities -->
+            <section id="flexbox_utilities">
+                <h3 class="mt-4">Flexbox</h3>
+                <p>Sử dụng Flexbox để căn chỉnh phần tử trong hàng hoặc cột:</p>
+                <div style="background-color: #bf9ce4;">
+                    <div class="d-flex justify-content-between p-3">
+                        <div class="p-2 bg-primary text-white">Flexbox 1</div>
+                        <div class="p-2 bg-success text-white">Flexbox 2</div>
+                        <div class="p-2 bg-danger text-white">Flexbox 3</div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-3 p-3">
+                        <div class="p-2 bg-primary text-white">Flex Column 1</div>
+                        <div class="p-2 bg-success text-white">Flex Column 2</div>
+                        <div class="p-2 bg-danger text-white">Flex Column 3</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Borders & Shadows -->
+            <section id="borders_&_shadows">
+                <h3 class="mt-4">Borders & Shadows</h3>
+                <p>Điều chỉnh các kiểu biên (borders) và bóng đổ (shadows) cho phần tử:</p>
+                    <div style="background-color: #bf9ce4;" class="p-3 mb-3 border border-4">Phần tử có viền mặc định</div>
+                    <div style="background-color: #bf9ce4;" class="p-3 mb-3 border border-4 border-primary">Phần tử có viền màu primary</div>
+                    <div style="background-color: #bf9ce4;" class="p-3 mb-3 border border-2 border-success">Phần tử có viền mỏng và màu success</div>
+                    <div style="background-color: #bf9ce4;" class="p-3 mb-3 border border-4 rounded">Phần tử có viền bo tròn</div>
+                    <div style="background-color: #bf9ce4;" class="p-3 mb-3 shadow">Phần tử có hiệu ứng bóng nhẹ</div>
+                    <div style="background-color: #bf9ce4;" class="p-3 mb-3 shadow-lg">Phần tử có hiệu ứng bóng lớn</div>
+            </section>
+
+        </section>
+
+
 
 
 
@@ -303,6 +592,7 @@
 
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Bootstrap Introduction by "?" group</p>
+        <a href="#top">Quay lại đầu trang</a>
     </footer>
 
     <script>
