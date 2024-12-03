@@ -23,8 +23,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="introduce.html">Giới thiệu Bootstrap</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Giới thiệu Bootstrap
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#bootstrap">Bootstrap là gì?</a></li>
+                                <li><a class="dropdown-item" href="#time">Cột mốc quan trọng</a></li>
+                                <li><a class="dropdown-item" href="#versions">Các phiên bản</a></li>
+                            </ul>
                         </li>
+
+
                         <li class="nav-item"><a class="nav-link" href="feature.html">Tính năng</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html">Thành viên</a></li>
                     </ul>
@@ -43,106 +55,119 @@
         <!-- History Section -->
         <div id="bootstrap-content" class="container my-5">
             <div class="row">
-                <div class="col-md-12">
-                    <!-- Bootstrap là gì -->
-                    <h3 class="mt-4"><i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap là gì?</h3>
-                    <p>Bootstrap là một framework front-end mã nguồn mở được tạo bởi Mark Otto và Jacob Thornton tại
-                        Twitter.</p>
+                <div class="bootstrap col-md-12">
+                    <section id="bootstrap">
+                        <!-- Bootstrap là gì -->
+                        <h3 class="mt-4"><i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap là gì?</h3>
+                        <p>Bootstrap là một framework front-end mã nguồn mở được tạo bởi Mark Otto và Jacob Thornton tại
+                            Twitter.</p>
 
-                    <!-- Accordion -->
-                    <div class="accordion mt-4" id="historyAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    1. Nguồn gốc của Bootstrap
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#historyAccordion">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li><strong>Thời gian ra đời:</strong> Bootstrap được phát triển vào năm 2010
-                                            tại
-                                            công ty Twitter.</li>
-                                        <li><strong>Người sáng lập:</strong>
-                                            <ul>
-                                                <li>Mark Otto: Nhà thiết kế giao diện tại Twitter.</li>
-                                                <li>Jacob Thornton: Kỹ sư phần mềm tại Twitter.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Tên gọi ban đầu:</strong> Twitter Blueprint, với mục tiêu chuẩn hóa
-                                            và
-                                            đơn giản hóa các công cụ giao diện người dùng nội bộ tại Twitter.</li>
-                                    </ul>
+                        <!-- Accordion -->
+                        <div class="accordion mt-4" id="historyAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        1. Nguồn gốc của Bootstrap
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#historyAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>Thời gian ra đời:</strong> Bootstrap được phát triển vào năm
+                                                2010
+                                                tại
+                                                công ty Twitter.</li>
+                                            <li><strong>Người sáng lập:</strong>
+                                                <ul>
+                                                    <li>Mark Otto: Nhà thiết kế giao diện tại Twitter.</li>
+                                                    <li>Jacob Thornton: Kỹ sư phần mềm tại Twitter.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Tên gọi ban đầu:</strong> Twitter Blueprint, với mục tiêu chuẩn
+                                                hóa
+                                                và
+                                                đơn giản hóa các công cụ giao diện người dùng nội bộ tại Twitter.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    2. Động lực phát triển
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#historyAccordion">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li><strong>Vấn đề chính tại Twitter:</strong> Trước khi Bootstrap ra đời, đội
-                                            ngũ
-                                            phát triển tại Twitter sử dụng nhiều công cụ khác nhau, gây nên sự không
-                                            đồng
-                                            nhất trong giao diện và trải nghiệm người dùng.</li>
-                                        <li><strong>Giải pháp:</strong> Bootstrap được tạo ra như một framework thống
-                                            nhất, kết hợp giữa HTML, CSS, và JavaScript để xây dựng giao diện nhất quán,
-                                            dễ bảo trì.</li>
-                                    </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        2. Động lực phát triển
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#historyAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>Vấn đề chính tại Twitter:</strong> Trước khi Bootstrap ra đời,
+                                                đội
+                                                ngũ
+                                                phát triển tại Twitter sử dụng nhiều công cụ khác nhau, gây nên sự không
+                                                đồng
+                                                nhất trong giao diện và trải nghiệm người dùng.</li>
+                                            <li><strong>Giải pháp:</strong> Bootstrap được tạo ra như một framework
+                                                thống
+                                                nhất, kết hợp giữa HTML, CSS, và JavaScript để xây dựng giao diện nhất
+                                                quán,
+                                                dễ bảo trì.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    3. Ra mắt
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#historyAccordion">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li><strong>Ngày công bố:</strong> Bootstrap chính thức được phát hành dưới dạng
-                                            mã nguồn mở trên GitHub vào ngày 19/8/2011.</li>
-                                        <li><strong>Mục tiêu công khai:</strong> Mang lại một framework front-end dễ sử
-                                            dụng, giúp cộng đồng lập trình viên xây dựng giao diện nhanh chóng và hiệu
-                                            quả.
-                                        </li>
-                                    </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        3. Ra mắt
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#historyAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>Ngày công bố:</strong> Bootstrap chính thức được phát hành dưới
+                                                dạng
+                                                mã nguồn mở trên GitHub vào ngày 19/8/2011.</li>
+                                            <li><strong>Mục tiêu công khai:</strong> Mang lại một framework front-end dễ
+                                                sử
+                                                dụng, giúp cộng đồng lập trình viên xây dựng giao diện nhanh chóng và
+                                                hiệu
+                                                quả.
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    4. Thành công
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#historyAccordion">
-                                <div class="accordion-body">
-                                    <p>Bootstrap nhanh chóng trở thành một trong những framework phổ biến nhất trên
-                                        GitHub, được sử dụng rộng rãi từ các trang web cá nhân đến các hệ thống phức
-                                        tạp.</p>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        4. Thành công
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#historyAccordion">
+                                    <div class="accordion-body">
+                                        <p>Bootstrap nhanh chóng trở thành một trong những framework phổ biến nhất trên
+                                            GitHub, được sử dụng rộng rãi từ các trang web cá nhân đến các hệ thống phức
+                                            tạp.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                    </section>
+                </div>
 
-                    <!-- Progress Bars -->
+                <!-- Progress Bars -->
+                <section id="time">
                     <h3 class="mt-4">Các cột mốc quan trọng</h3>
                     <div class="progress mb-3" style="height: 25px;">
                         <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20"
@@ -174,8 +199,10 @@
                             2021: Bootstrap 5.0 loại bỏ jQuery
                         </div>
                     </div>
+                </section>
 
-                    <!-- Bootstrap Versions -->
+                <!-- Bootstrap Versions -->
+                <section id="versions">
                     <h3 class="mt-4">Các phiên bản Bootstrap</h3>
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
                         <!-- 1 -->
@@ -268,17 +295,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy;2024 Bootstrap <i class="bi bi-bootstrap-fill text-primary"></i> Introduction by "?" group.</p>
-        </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy;2024 Bootstrap <i class="bi bi-bootstrap-fill text-primary"></i> Introduction by "?" group.</p>
+    </footer>
 
-        <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-        <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

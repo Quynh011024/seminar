@@ -82,6 +82,17 @@ header p {
   font-weight: bold;
   color: #ffc107 !important;
 }
+.custom-dropdown {
+  background-color: #000 !important;
+  border: none;
+}
+.custom-dropdown .dropdown-item {
+  color: #fff;
+}
+.custom-dropdown .dropdown-item:hover {
+  background-color: #333; 
+  color: #fff;
+}
 
 /* Carousel*/
 .carousel-item img {
